@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <color name="ivory">#fffff0</color>
+    <color name="deepskyblue">#00bfff</color>
+    <color name="moccasin">#ffe4b5</color>
+    <color name="tomato">#ff69b4</color>
+    <color name="olivedrab">#6b8e23</color>
+</resources>

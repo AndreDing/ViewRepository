@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:holo="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.ialways.android.ui.view.ProgressTextView
+        android:id="@+id/down_progress"
+        android:layout_width="@dimen/tv_width"
+        android:layout_height="@dimen/tv_height"
+        android:background="#ffffff"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        holo:in_color="@color/ivory"
+        holo:in_tv_color="@color/moccasin"
+        holo:out_color="@color/deepskyblue"
+        holo:out_tv_color="@color/tomato"
+        holo:stroke_color="@color/olivedrab"
+        holo:tv_content="@string/progress"
+        holo:tv_height="@dimen/tv_height"
+        holo:tv_progress="0"
+        holo:stroke_width="@dimen/stroke_width"
+        holo:tv_size="@dimen/tv_size"
+        holo:tv_width="@dimen/tv_width" />
+
+</LinearLayout>
