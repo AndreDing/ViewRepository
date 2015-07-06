@@ -1,4 +1,7 @@
 DESCRIBE:FROM THIS PACKAGE, YOU CAN USE SOME SPECIAL VIEWS OR SOME SPECIAL ANIMATIONS (Android)
 
 CONTRIBUTION:
-	Hey guys, I wish you can add some spcial¡¢beautiful view or animation to this projects. 
+	I wish you can add some spcial¡¢beautiful view or animation to this projects, And fix or find bugs from this project.
+	
+COMMIT FORMAT:
+	Any commit request should use "commit.formmater" file as commit annotation template.

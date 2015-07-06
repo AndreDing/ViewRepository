@@ -38,7 +38,7 @@ public class ProgressTvFragment extends Fragment {
             }
         }
     };
-
+    
     public static ProgressTvFragment getInstance(Context context, Bundle bundle) {
         mCtx = context;
         ProgressTvFragment progressTvFragment = new ProgressTvFragment();

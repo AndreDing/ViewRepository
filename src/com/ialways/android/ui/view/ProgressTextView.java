@@ -35,10 +35,10 @@ public class ProgressTextView extends View {
     private int mStrokeColor;
     // 字体大小
     private float mTvSize;
-    private int mLeft;
-    private int mTop;
-    private int mRight;
-    private int mBottom;
+//    private int mLeft;
+//    private int mTop;
+//    private int mRight;
+//    private int mBottom;
     // TextView内容
     private String mTvContent;
 
@@ -97,10 +97,10 @@ public class ProgressTextView extends View {
         // TODO Auto-generated method stub
         super.onLayout(changed, left, top, right, bottom);
 
-        this.mLeft = left;
-        this.mTop = top;
-        this.mRight = right;
-        this.mBottom = bottom;
+//        this.mLeft = left;
+//        this.mTop = top;
+//        this.mRight = right;
+//        this.mBottom = bottom;
     }
 
     public void setProgress(float progress) {
@@ -118,21 +118,21 @@ public class ProgressTextView extends View {
         Paint bgPaint = new Paint();
         bgPaint.setColor(mInColor);
         bgPaint.setStyle(Paint.Style.FILL);
-        canvas.drawRect(mLeft, mTop, mRight, mBottom, bgPaint);
+        canvas.drawRect(0, 0, mWidth, mHeight, bgPaint);
 
         // 绘制进度
-        float progressRight = mProgress * mRight;
+        float progressRight = mProgress * mWidth;
         Paint progressPaint = new Paint();
         progressPaint.setColor(mOutColor);
         progressPaint.setStyle(Paint.Style.FILL);
-        canvas.drawRect(mLeft, mTop, progressRight, mBottom, progressPaint);
+        canvas.drawRect(0, 0, mWidth, mHeight, progressPaint);
 
         // 绘制边框
         Paint strokePaint = new Paint();
         strokePaint.setColor(mStrokeColor);
         strokePaint.setStrokeWidth(mStrokeWidth);
         strokePaint.setStyle(Paint.Style.STROKE);
-        canvas.drawRect(mLeft, mTop, mRight, mBottom, strokePaint);
+        canvas.drawRect(0, 0, mWidth, mHeight, strokePaint);
 
         // 绘制背景文字
         Paint textPaint = new Paint();
