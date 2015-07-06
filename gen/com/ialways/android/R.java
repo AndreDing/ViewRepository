@@ -49,7 +49,7 @@ containing a value of this type.
          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int progressTVStyle=0x7f01000b;
+        public static final int progressTVStyle=0x7f010009;
         /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
 <p>This may also be a reference to a resource (in the form
@@ -68,7 +68,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int stroke_width=0x7f01000a;
+        public static final int stroke_width=0x7f010008;
         /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -76,17 +76,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int tv_content=0x7f010009;
-        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int tv_height=0x7f010008;
+        public static final int tv_content=0x7f010007;
         /** <p>Must be an integer value, such as "<code>100</code>".
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -105,16 +95,6 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static final int tv_size=0x7f010006;
-        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int tv_width=0x7f010007;
     }
     public static final class color {
         public static final int deepskyblue=0x7f040001;
@@ -165,10 +145,8 @@ containing a value of this type.
            <tr><td><code>{@link #ProgressTextView_stroke_color com.ialways.android:stroke_color}</code></td><td></td></tr>
            <tr><td><code>{@link #ProgressTextView_stroke_width com.ialways.android:stroke_width}</code></td><td></td></tr>
            <tr><td><code>{@link #ProgressTextView_tv_content com.ialways.android:tv_content}</code></td><td></td></tr>
-           <tr><td><code>{@link #ProgressTextView_tv_height com.ialways.android:tv_height}</code></td><td></td></tr>
            <tr><td><code>{@link #ProgressTextView_tv_progress com.ialways.android:tv_progress}</code></td><td></td></tr>
            <tr><td><code>{@link #ProgressTextView_tv_size com.ialways.android:tv_size}</code></td><td></td></tr>
-           <tr><td><code>{@link #ProgressTextView_tv_width com.ialways.android:tv_width}</code></td><td></td></tr>
            </table>
            @see #ProgressTextView_in_color
            @see #ProgressTextView_in_tv_color
@@ -177,15 +155,13 @@ containing a value of this type.
            @see #ProgressTextView_stroke_color
            @see #ProgressTextView_stroke_width
            @see #ProgressTextView_tv_content
-           @see #ProgressTextView_tv_height
            @see #ProgressTextView_tv_progress
            @see #ProgressTextView_tv_size
-           @see #ProgressTextView_tv_width
          */
         public static final int[] ProgressTextView = {
             0x7f010000, 0x7f010001, 0x7f010002, 0x7f010003,
             0x7f010004, 0x7f010005, 0x7f010006, 0x7f010007,
-            0x7f010008, 0x7f010009, 0x7f01000a
+            0x7f010008
         };
         /**
           <p>This symbol is the offset where the {@link com.ialways.android.R.attr#in_color}
@@ -277,7 +253,7 @@ theme attribute (in the form
 containing a value of this type.
           @attr name com.ialways.android:stroke_width
         */
-        public static final int ProgressTextView_stroke_width = 10;
+        public static final int ProgressTextView_stroke_width = 8;
         /**
           <p>This symbol is the offset where the {@link com.ialways.android.R.attr#tv_content}
           attribute's value can be found in the {@link #ProgressTextView} array.
@@ -291,23 +267,7 @@ theme attribute (in the form
 containing a value of this type.
           @attr name com.ialways.android:tv_content
         */
-        public static final int ProgressTextView_tv_content = 9;
-        /**
-          <p>This symbol is the offset where the {@link com.ialways.android.R.attr#tv_height}
-          attribute's value can be found in the {@link #ProgressTextView} array.
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.ialways.android:tv_height
-        */
-        public static final int ProgressTextView_tv_height = 8;
+        public static final int ProgressTextView_tv_content = 7;
         /**
           <p>This symbol is the offset where the {@link com.ialways.android.R.attr#tv_progress}
           attribute's value can be found in the {@link #ProgressTextView} array.
@@ -338,21 +298,5 @@ containing a value of this type.
           @attr name com.ialways.android:tv_size
         */
         public static final int ProgressTextView_tv_size = 6;
-        /**
-          <p>This symbol is the offset where the {@link com.ialways.android.R.attr#tv_width}
-          attribute's value can be found in the {@link #ProgressTextView} array.
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.ialways.android:tv_width
-        */
-        public static final int ProgressTextView_tv_width = 7;
     };
 }

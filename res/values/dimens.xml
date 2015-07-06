@@ -3,5 +3,5 @@
     <dimen name="tv_width">64dp</dimen>    
     <dimen name="tv_height">21dp</dimen>
     <dimen name="tv_size">11sp</dimen>
-    <dimen name="stroke_width">1dp</dimen>
+    <dimen name="stroke_width">3dp</dimen>
 </resources>

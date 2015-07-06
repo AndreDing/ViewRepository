@@ -35,10 +35,6 @@ public class ProgressTextView extends View {
     private int mStrokeColor;
     // 字体大小
     private float mTvSize;
-//    private int mLeft;
-//    private int mTop;
-//    private int mRight;
-//    private int mBottom;
     // TextView内容
     private String mTvContent;
 
@@ -70,10 +66,6 @@ public class ProgressTextView extends View {
 
             mProgress = attributes.getFloat(R.styleable.ProgressTextView_tv_progress, 0f);
 
-            mWidth = attributes.getDimension(R.styleable.ProgressTextView_tv_width, 0);
-
-            mHeight = attributes.getDimension(R.styleable.ProgressTextView_tv_height, 0);
-
             mTvSize = attributes.getDimension(R.styleable.ProgressTextView_tv_size, 0);
 
             mTvContent = attributes.getString(R.styleable.ProgressTextView_tv_content);
@@ -92,20 +84,18 @@ public class ProgressTextView extends View {
         this.invalidate();
     }
 
+    public void setProgress(float progress) {
+        this.mProgress = progress;
+        this.invalidate();
+    }
+
     @Override
     protected void onLayout(boolean changed, int left, int top, int right, int bottom) {
         // TODO Auto-generated method stub
         super.onLayout(changed, left, top, right, bottom);
 
-//        this.mLeft = left;
-//        this.mTop = top;
-//        this.mRight = right;
-//        this.mBottom = bottom;
-    }
-
-    public void setProgress(float progress) {
-        this.mProgress = progress;
-        this.invalidate();
+        this.mWidth = right - left;
+        this.mHeight = bottom - top;
     }
 
     @SuppressLint("DrawAllocation")
@@ -125,7 +115,7 @@ public class ProgressTextView extends View {
         Paint progressPaint = new Paint();
         progressPaint.setColor(mOutColor);
         progressPaint.setStyle(Paint.Style.FILL);
-        canvas.drawRect(0, 0, mWidth, mHeight, progressPaint);
+        canvas.drawRect(0, 0, progressRight, mHeight, progressPaint);
 
         // 绘制边框
         Paint strokePaint = new Paint();
