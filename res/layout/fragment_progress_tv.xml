@@ -21,5 +21,23 @@
         holo:tv_content="@string/progress"
         holo:tv_progress="0"
         holo:tv_size="@dimen/tv_size" />
+    
+    <View 
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#ffffff"
+        android:layout_below="@+id/down_progress"
+        />
+    
+    <com.ialways.android.ui.view.RotateRoundView
+        android:id="@+id/rotate_round_view"
+        android:layout_width="165dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/divider"
+        holo:max_radius="80dp"
+        holo:zoom_scale="0.8"
+        holo:anim_duration="2000"
+        />
 
 </RelativeLayout>

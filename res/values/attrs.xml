@@ -34,4 +34,23 @@
      
     <!-- 反色效果进度样式 -->
      <attr name="progressTVStyle" format="reference"></attr>
+     
+    <!-- 切换控件 -->
+    <declare-styleable name="RotateRoundView">
+        <attr name="left_tv_color" format="color" />
+        <attr name="right_tv_color" format="color" />
+        <attr name="center_tv_color" format="color" />
+        <attr name="left_tv_content" format="string" />
+        <attr name="right_tv_content" format="string" />
+        <attr name="center_tv_content" format="string" />
+        <attr name="left_tv_size" format="dimension" />
+        <attr name="right_tv_size" format="dimension" />
+        <attr name="center_tv_size" format="dimension" />
+        <attr name="max_radius" format="dimension" />
+        <attr name="zoom_scale" format="float" />
+        <attr name="left_color" format="color" />
+        <attr name="right_color" format="color" />
+        <attr name="center_color" format="color" />
+        <attr name="anim_duration" format="integer" />
+    </declare-styleable>  
 </resources>

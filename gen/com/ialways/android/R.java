@@ -9,6 +9,50 @@ package com.ialways.android;
 
 public final class R {
     public static final class attr {
+        /** <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int anim_duration=0x7f010018;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int center_color=0x7f010017;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int center_tv_color=0x7f01000c;
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int center_tv_content=0x7f01000f;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int center_tv_size=0x7f010012;
         /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
 <p>This may also be a reference to a resource (in the form
@@ -35,6 +79,52 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
+        public static final int left_color=0x7f010015;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int left_tv_color=0x7f01000a;
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int left_tv_content=0x7f01000d;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int left_tv_size=0x7f010010;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int max_radius=0x7f010013;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
         public static final int out_color=0x7f010002;
         /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
@@ -50,6 +140,42 @@ containing a value of this type.
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int progressTVStyle=0x7f010009;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int right_color=0x7f010016;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int right_tv_color=0x7f01000b;
+        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int right_tv_content=0x7f01000e;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int right_tv_size=0x7f010011;
         /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
 <p>This may also be a reference to a resource (in the form
@@ -95,6 +221,14 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static final int tv_size=0x7f010006;
+        /** <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int zoom_scale=0x7f010014;
     }
     public static final class color {
         public static final int deepskyblue=0x7f040001;
@@ -120,12 +254,18 @@ containing a value of this type.
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
+        public static final int center_view_container=0x7f070006;
+        public static final int divider=0x7f070002;
         public static final int down_progress=0x7f070001;
         public static final int fragment_container=0x7f070000;
+        public static final int left_view_container=0x7f070004;
+        public static final int right_view_container=0x7f070005;
+        public static final int rotate_round_view=0x7f070003;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
         public static final int fragment_progress_tv=0x7f030001;
+        public static final int rotate_round_view=0x7f030002;
     }
     public static final class string {
         public static final int app_name=0x7f060000;
@@ -298,5 +438,273 @@ containing a value of this type.
           @attr name com.ialways.android:tv_size
         */
         public static final int ProgressTextView_tv_size = 6;
+        /**  切换控件 
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #RotateRoundView_anim_duration com.ialways.android:anim_duration}</code></td><td></td></tr>
+           <tr><td><code>{@link #RotateRoundView_center_color com.ialways.android:center_color}</code></td><td></td></tr>
+           <tr><td><code>{@link #RotateRoundView_center_tv_color com.ialways.android:center_tv_color}</code></td><td></td></tr>
+           <tr><td><code>{@link #RotateRoundView_center_tv_content com.ialways.android:center_tv_content}</code></td><td></td></tr>
+           <tr><td><code>{@link #RotateRoundView_center_tv_size com.ialways.android:center_tv_size}</code></td><td></td></tr>
+           <tr><td><code>{@link #RotateRoundView_left_color com.ialways.android:left_color}</code></td><td></td></tr>
+           <tr><td><code>{@link #RotateRoundView_left_tv_color com.ialways.android:left_tv_color}</code></td><td></td></tr>
+           <tr><td><code>{@link #RotateRoundView_left_tv_content com.ialways.android:left_tv_content}</code></td><td></td></tr>
+           <tr><td><code>{@link #RotateRoundView_left_tv_size com.ialways.android:left_tv_size}</code></td><td></td></tr>
+           <tr><td><code>{@link #RotateRoundView_max_radius com.ialways.android:max_radius}</code></td><td></td></tr>
+           <tr><td><code>{@link #RotateRoundView_right_color com.ialways.android:right_color}</code></td><td></td></tr>
+           <tr><td><code>{@link #RotateRoundView_right_tv_color com.ialways.android:right_tv_color}</code></td><td></td></tr>
+           <tr><td><code>{@link #RotateRoundView_right_tv_content com.ialways.android:right_tv_content}</code></td><td></td></tr>
+           <tr><td><code>{@link #RotateRoundView_right_tv_size com.ialways.android:right_tv_size}</code></td><td></td></tr>
+           <tr><td><code>{@link #RotateRoundView_zoom_scale com.ialways.android:zoom_scale}</code></td><td></td></tr>
+           </table>
+           @see #RotateRoundView_anim_duration
+           @see #RotateRoundView_center_color
+           @see #RotateRoundView_center_tv_color
+           @see #RotateRoundView_center_tv_content
+           @see #RotateRoundView_center_tv_size
+           @see #RotateRoundView_left_color
+           @see #RotateRoundView_left_tv_color
+           @see #RotateRoundView_left_tv_content
+           @see #RotateRoundView_left_tv_size
+           @see #RotateRoundView_max_radius
+           @see #RotateRoundView_right_color
+           @see #RotateRoundView_right_tv_color
+           @see #RotateRoundView_right_tv_content
+           @see #RotateRoundView_right_tv_size
+           @see #RotateRoundView_zoom_scale
+         */
+        public static final int[] RotateRoundView = {
+            0x7f01000a, 0x7f01000b, 0x7f01000c, 0x7f01000d,
+            0x7f01000e, 0x7f01000f, 0x7f010010, 0x7f010011,
+            0x7f010012, 0x7f010013, 0x7f010014, 0x7f010015,
+            0x7f010016, 0x7f010017, 0x7f010018
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.ialways.android.R.attr#anim_duration}
+          attribute's value can be found in the {@link #RotateRoundView} array.
+
+
+          <p>Must be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.ialways.android:anim_duration
+        */
+        public static final int RotateRoundView_anim_duration = 14;
+        /**
+          <p>This symbol is the offset where the {@link com.ialways.android.R.attr#center_color}
+          attribute's value can be found in the {@link #RotateRoundView} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.ialways.android:center_color
+        */
+        public static final int RotateRoundView_center_color = 13;
+        /**
+          <p>This symbol is the offset where the {@link com.ialways.android.R.attr#center_tv_color}
+          attribute's value can be found in the {@link #RotateRoundView} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.ialways.android:center_tv_color
+        */
+        public static final int RotateRoundView_center_tv_color = 2;
+        /**
+          <p>This symbol is the offset where the {@link com.ialways.android.R.attr#center_tv_content}
+          attribute's value can be found in the {@link #RotateRoundView} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.ialways.android:center_tv_content
+        */
+        public static final int RotateRoundView_center_tv_content = 5;
+        /**
+          <p>This symbol is the offset where the {@link com.ialways.android.R.attr#center_tv_size}
+          attribute's value can be found in the {@link #RotateRoundView} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.ialways.android:center_tv_size
+        */
+        public static final int RotateRoundView_center_tv_size = 8;
+        /**
+          <p>This symbol is the offset where the {@link com.ialways.android.R.attr#left_color}
+          attribute's value can be found in the {@link #RotateRoundView} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.ialways.android:left_color
+        */
+        public static final int RotateRoundView_left_color = 11;
+        /**
+          <p>This symbol is the offset where the {@link com.ialways.android.R.attr#left_tv_color}
+          attribute's value can be found in the {@link #RotateRoundView} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.ialways.android:left_tv_color
+        */
+        public static final int RotateRoundView_left_tv_color = 0;
+        /**
+          <p>This symbol is the offset where the {@link com.ialways.android.R.attr#left_tv_content}
+          attribute's value can be found in the {@link #RotateRoundView} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.ialways.android:left_tv_content
+        */
+        public static final int RotateRoundView_left_tv_content = 3;
+        /**
+          <p>This symbol is the offset where the {@link com.ialways.android.R.attr#left_tv_size}
+          attribute's value can be found in the {@link #RotateRoundView} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.ialways.android:left_tv_size
+        */
+        public static final int RotateRoundView_left_tv_size = 6;
+        /**
+          <p>This symbol is the offset where the {@link com.ialways.android.R.attr#max_radius}
+          attribute's value can be found in the {@link #RotateRoundView} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.ialways.android:max_radius
+        */
+        public static final int RotateRoundView_max_radius = 9;
+        /**
+          <p>This symbol is the offset where the {@link com.ialways.android.R.attr#right_color}
+          attribute's value can be found in the {@link #RotateRoundView} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.ialways.android:right_color
+        */
+        public static final int RotateRoundView_right_color = 12;
+        /**
+          <p>This symbol is the offset where the {@link com.ialways.android.R.attr#right_tv_color}
+          attribute's value can be found in the {@link #RotateRoundView} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.ialways.android:right_tv_color
+        */
+        public static final int RotateRoundView_right_tv_color = 1;
+        /**
+          <p>This symbol is the offset where the {@link com.ialways.android.R.attr#right_tv_content}
+          attribute's value can be found in the {@link #RotateRoundView} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.ialways.android:right_tv_content
+        */
+        public static final int RotateRoundView_right_tv_content = 4;
+        /**
+          <p>This symbol is the offset where the {@link com.ialways.android.R.attr#right_tv_size}
+          attribute's value can be found in the {@link #RotateRoundView} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.ialways.android:right_tv_size
+        */
+        public static final int RotateRoundView_right_tv_size = 7;
+        /**
+          <p>This symbol is the offset where the {@link com.ialways.android.R.attr#zoom_scale}
+          attribute's value can be found in the {@link #RotateRoundView} array.
+
+
+          <p>Must be a floating point value, such as "<code>1.2</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.ialways.android:zoom_scale
+        */
+        public static final int RotateRoundView_zoom_scale = 10;
     };
 }

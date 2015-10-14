@@ -30,7 +30,6 @@ public class ProgressTvFragment extends Fragment {
         public void handleMessage(Message msg) {
             switch (msg.what) {
             case MSG_SET_PROGRESS:
-                System.out.println("set progress");
                 progress += step;
                 mProgressTv.setProgress(progress);
                 mHandler.sendEmptyMessageDelayed(MSG_SET_PROGRESS, 500);
