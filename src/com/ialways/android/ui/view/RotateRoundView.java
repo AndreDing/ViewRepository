@@ -56,26 +56,33 @@ public class RotateRoundView extends RelativeLayout {
     private float leftX;
     private float centerX;
     private float rightX;
-    
+
     private boolean hasNum = false;
-    
-    private int i = 0;
-    
+
+    private int mLeftIndex = 0;
+    private int mRightIndex = 0;
+
     private RelativeLayout.LayoutParams mLeftLayout;
     private RelativeLayout.LayoutParams mRightLayout;
     private RelativeLayout.LayoutParams mCenterLayout;
-    
+
+    private float mStartX;
+
+    private final int RIGHT_MSG = 0;
+    private final int LEFT_MSG = 1;
+    private final int CENTER_MSG = 2;
+
     private Handler mHander = new Handler() {
-        
+
         public void handleMessage(Message msg) {
             switch (msg.what) {
-            case 0:
+            case RIGHT_MSG:
                 mRightView.bringToFront();
                 break;
-            case 1:
+            case LEFT_MSG:
                 mLeftView.bringToFront();
                 break;
-            case 2:
+            case CENTER_MSG:
                 mCenterView.bringToFront();
                 break;
             }
@@ -102,21 +109,7 @@ public class RotateRoundView extends RelativeLayout {
         mAttributes = mCtx.obtainStyledAttributes(attrs, R.styleable.RotateRoundView, defStyleAttr, 0);
         parseData();
         initView();
-        initListener();
     }
-
-    //    public RotateRoundView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
-    //        super(context, attrs, defStyleAttr, defStyleRes);
-    //        // TODO Auto-generated constructor stub
-    //
-    //        this.mCtx = context;
-    //        this.mInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-    //        this.mInflater.inflate(R.layout.rotate_round_view, this);
-    //        mAttributes = mCtx.obtainStyledAttributes(attrs, R.styleable.RotateRoundView, defStyleAttr, defStyleRes);
-    //        parseData();
-    //        initView();
-    //        initListener();
-    //    }
 
     private void parseData() {
 
@@ -184,74 +177,62 @@ public class RotateRoundView extends RelativeLayout {
         }
     }
 
-    private void initListener() {
-        
-    }
+    private void startLeftAnimator() {
 
-    private void startAnimator() {
-
-        int index = i++;
+        int index = (mLeftIndex++ - mRightIndex) % 3;
         Animation rightScaleAnimation = null;
         Animation rightTranslateAnimation = null; // 移动
-        
+
         Animation leftScaleAnimation = null;
         Animation leftTranslateAnimation = null; // 移动
-        
+
         Animation centerScaleAnimation = null;
         Animation centerTranslateAnimation = null; // 移动
-        
-        
-        if (index % 3 == 0) {
+
+        if (index == 0) {
             leftTranslateAnimation = new TranslateAnimation(0, rightX - leftX, 0, 0); // 移动
             leftScaleAnimation = new ScaleAnimation(1f, 1f, 1f, 1f,// 整个屏幕就0.0到1.0的大小//缩放
                     Animation.INFINITE, 0.5f, Animation.INFINITE, 0.5f);
-            
+
             rightScaleAnimation = new ScaleAnimation(1f, 1 / mScale, 1f, 1 / mScale,// 整个屏幕就0.0到1.0的大小//缩放
                     Animation.INFINITE, 0.5f, Animation.INFINITE, 0.5f);
             rightTranslateAnimation = new TranslateAnimation(0, centerX - rightX, 0, -(mMaxRadius - mMaxRadius * mScale) / 2); // 移动
-            
-            centerScaleAnimation = new ScaleAnimation(1f, mScale, 1f,
-                    mScale,// 整个屏幕就0.0到1.0的大小//缩放
-                    Animation.INFINITE, 0.5f,
-                    Animation.INFINITE, 0.5f);
+
+            centerScaleAnimation = new ScaleAnimation(1f, mScale, 1f, mScale,// 整个屏幕就0.0到1.0的大小//缩放
+                    Animation.INFINITE, 0.5f, Animation.INFINITE, 0.5f);
             centerTranslateAnimation = new TranslateAnimation(0, leftX - centerX, 0, (mMaxRadius - mMaxRadius * mScale) / 2); // 移动
 
-            mHander.sendEmptyMessageDelayed(0, mAnimDuration / 2);
-        } else if (index % 3 == 1) {
+            mHander.sendEmptyMessageDelayed(RIGHT_MSG, mAnimDuration / 2);
+        } else if (index == 1 || index == -2) {
             leftTranslateAnimation = new TranslateAnimation(rightX - leftX, centerX - leftX, 0, -(mMaxRadius - mMaxRadius * mScale) / 2); // 移动
             leftScaleAnimation = new ScaleAnimation(1f, 1 / mScale, 1f, 1 / mScale,// 整个屏幕就0.0到1.0的大小//缩放
                     Animation.INFINITE, 0.5f, Animation.INFINITE, 0.5f);
-            
+
             rightScaleAnimation = new ScaleAnimation(1 / mScale, 1f, 1 / mScale, 1f,// 整个屏幕就0.0到1.0的大小//缩放
                     Animation.INFINITE, 0.5f, Animation.INFINITE, 0.5f);
             rightTranslateAnimation = new TranslateAnimation(centerX - rightX, leftX - rightX, -(mMaxRadius - mMaxRadius * mScale) / 2, 0); // 移动
-            
-            centerScaleAnimation = new ScaleAnimation(mScale, mScale, mScale,
-                    mScale,// 整个屏幕就0.0到1.0的大小//缩放
-                    Animation.INFINITE, 0.5f,
-                    Animation.INFINITE, 0.5f);
+
+            centerScaleAnimation = new ScaleAnimation(mScale, mScale, mScale, mScale,// 整个屏幕就0.0到1.0的大小//缩放
+                    Animation.INFINITE, 0.5f, Animation.INFINITE, 0.5f);
             centerTranslateAnimation = new TranslateAnimation(leftX - centerX, rightX - centerX, (mMaxRadius - mMaxRadius * mScale) / 2, (mMaxRadius - mMaxRadius * mScale) / 2); // 移动
-            
-            mHander.sendEmptyMessageDelayed(1, mAnimDuration / 2);
-        } else if (index % 3 == 2) {
+
+            mHander.sendEmptyMessageDelayed(LEFT_MSG, mAnimDuration / 2);
+        } else if (index == 2 || index == -1) {
             leftTranslateAnimation = new TranslateAnimation(centerX - leftX, 0, -(mMaxRadius - mMaxRadius * mScale) / 2, 0); // 移动
             leftScaleAnimation = new ScaleAnimation(1 / mScale, 1f, 1 / mScale, 1f,// 整个屏幕就0.0到1.0的大小//缩放
                     Animation.INFINITE, 0.5f, Animation.INFINITE, 0.5f);
-            
-            
+
             rightScaleAnimation = new ScaleAnimation(1f, 1f, 1f, 1f,// 整个屏幕就0.0到1.0的大小//缩放
                     Animation.INFINITE, 0.5f, Animation.INFINITE, 0.5f);
             rightTranslateAnimation = new TranslateAnimation(leftX - rightX, 0, 0, 0); // 移动
-            
-            centerScaleAnimation = new ScaleAnimation(mScale, 1f, mScale,
-                    1f,// 整个屏幕就0.0到1.0的大小//缩放
-                    Animation.INFINITE, 0.5f,
-                    Animation.INFINITE, 0.5f);
+
+            centerScaleAnimation = new ScaleAnimation(mScale, 1f, mScale, 1f,// 整个屏幕就0.0到1.0的大小//缩放
+                    Animation.INFINITE, 0.5f, Animation.INFINITE, 0.5f);
             centerTranslateAnimation = new TranslateAnimation(rightX - centerX, 0, (mMaxRadius - mMaxRadius * mScale) / 2, 0); // 移动
-            
-            mHander.sendEmptyMessageDelayed(2, mAnimDuration / 2);
+
+            mHander.sendEmptyMessageDelayed(CENTER_MSG, mAnimDuration / 2);
         }
-        
+
         leftScaleAnimation.setDuration(mAnimDuration);
         leftScaleAnimation.setFillAfter(true);
         leftTranslateAnimation.setDuration(mAnimDuration);
@@ -260,7 +241,7 @@ public class RotateRoundView extends RelativeLayout {
         mLeftAnimator.setFillAfter(true);
         mLeftAnimator.addAnimation(leftTranslateAnimation);
         mLeftView.startAnimation(mLeftAnimator);
-        
+
         rightScaleAnimation.setDuration(mAnimDuration);
         rightScaleAnimation.setFillAfter(true);
         rightTranslateAnimation.setDuration(mAnimDuration);
@@ -269,11 +250,97 @@ public class RotateRoundView extends RelativeLayout {
         mRightAnimator.setFillAfter(true);
         mRightAnimator.addAnimation(rightTranslateAnimation);
         mRightView.startAnimation(mRightAnimator);
-        
+
         centerScaleAnimation.setDuration(mAnimDuration);
         centerScaleAnimation.setFillAfter(true);
         centerTranslateAnimation.setDuration(mAnimDuration);
-        mCenterAnimator= new AnimationSet(false);
+        mCenterAnimator = new AnimationSet(false);
+        mCenterAnimator.addAnimation(centerScaleAnimation);
+        mCenterAnimator.setFillAfter(true);
+        mCenterAnimator.addAnimation(centerTranslateAnimation);
+        mCenterView.startAnimation(mCenterAnimator);
+    }
+
+    private void startRightAnimator() {
+
+        int index = (mRightIndex++ - mLeftIndex) % 3;
+        Animation rightScaleAnimation = null;
+        Animation rightTranslateAnimation = null; // 移动
+
+        Animation leftScaleAnimation = null;
+        Animation leftTranslateAnimation = null; // 移动
+
+        Animation centerScaleAnimation = null;
+        Animation centerTranslateAnimation = null; // 移动
+
+        if (index == 0) {
+            leftTranslateAnimation = new ScaleAnimation(1f, 1 / mScale, 1f, 1 / mScale,// 整个屏幕就0.0到1.0的大小//缩放
+                    Animation.INFINITE, 0.5f, Animation.INFINITE, 0.5f);
+            leftScaleAnimation = new TranslateAnimation(0, centerX - leftX, 0, -(mMaxRadius - mMaxRadius * mScale) / 2); // 移动
+
+            rightScaleAnimation = new ScaleAnimation(1f, 1f, 1f, 1f,// 整个屏幕就0.0到1.0的大小//缩放
+                    Animation.INFINITE, 0.5f, Animation.INFINITE, 0.5f);
+            rightTranslateAnimation = new TranslateAnimation(0, leftX - rightX, 0, 0); // 移动
+
+            centerScaleAnimation = new ScaleAnimation(1f, mScale, 1f, mScale,// 整个屏幕就0.0到1.0的大小//缩放
+                    Animation.INFINITE, 0.5f, Animation.INFINITE, 0.5f);
+            centerTranslateAnimation = new TranslateAnimation(0, rightX - centerX, 0, (mMaxRadius - mMaxRadius * mScale) / 2); // 移动
+
+            mHander.sendEmptyMessageDelayed(LEFT_MSG, mAnimDuration / 2);
+        } else if (index == 1 || index == -2) {
+
+            leftTranslateAnimation = new ScaleAnimation(1 / mScale, 1f, 1 / mScale, 1f,// 整个屏幕就0.0到1.0的大小//缩放
+                    Animation.INFINITE, 0.5f, Animation.INFINITE, 0.5f);
+            leftScaleAnimation = new TranslateAnimation(centerX - leftX, rightX - leftX, -(mMaxRadius - mMaxRadius * mScale) / 2, 0); // 移动
+
+            rightScaleAnimation = new ScaleAnimation(1f, 1 / mScale, 1f, 1 / mScale,// 整个屏幕就0.0到1.0的大小//缩放
+                    Animation.INFINITE, 0.5f, Animation.INFINITE, 0.5f);
+            rightTranslateAnimation = new TranslateAnimation(leftX - rightX, centerX - rightX, 0, -(mMaxRadius - mMaxRadius * mScale) / 2); // 移动
+
+            centerScaleAnimation = new ScaleAnimation(mScale, mScale, mScale, mScale,// 整个屏幕就0.0到1.0的大小//缩放
+                    Animation.INFINITE, 0.5f, Animation.INFINITE, 0.5f);
+            centerTranslateAnimation = new TranslateAnimation(rightX - centerX, leftX - centerX, (mMaxRadius - mMaxRadius * mScale) / 2, (mMaxRadius - mMaxRadius * mScale) / 2); // 移动
+            //            
+            mHander.sendEmptyMessageDelayed(RIGHT_MSG, mAnimDuration / 2);
+        } else if (index == 2 || index == -1) {
+
+            leftTranslateAnimation = new TranslateAnimation(rightX - leftX, 0, 0, 0); // 移动
+            leftScaleAnimation = new ScaleAnimation(1f, 1f, 1f, 1f,// 整个屏幕就0.0到1.0的大小//缩放
+                    Animation.INFINITE, 0.5f, Animation.INFINITE, 0.5f);
+
+            rightScaleAnimation = new ScaleAnimation(1 / mScale, 1f, 1 / mScale, 1f,// 整个屏幕就0.0到1.0的大小//缩放
+                    Animation.INFINITE, 0.5f, Animation.INFINITE, 0.5f);
+            rightTranslateAnimation = new TranslateAnimation(centerX - rightX, 0, -(mMaxRadius - mMaxRadius * mScale) / 2, 0); // 移动
+
+            centerScaleAnimation = new ScaleAnimation(mScale, 1f, mScale, 1f,// 整个屏幕就0.0到1.0的大小//缩放
+                    Animation.INFINITE, 0.5f, Animation.INFINITE, 0.5f);
+            centerTranslateAnimation = new TranslateAnimation(leftX - centerX, 0, (mMaxRadius - mMaxRadius * mScale) / 2, 0); // 移动
+
+            mHander.sendEmptyMessageDelayed(CENTER_MSG, mAnimDuration / 2);
+        }
+
+        leftScaleAnimation.setDuration(mAnimDuration);
+        leftScaleAnimation.setFillAfter(true);
+        leftTranslateAnimation.setDuration(mAnimDuration);
+        mLeftAnimator = new AnimationSet(false);
+        mLeftAnimator.addAnimation(leftScaleAnimation);
+        mLeftAnimator.setFillAfter(true);
+        mLeftAnimator.addAnimation(leftTranslateAnimation);
+        mLeftView.startAnimation(mLeftAnimator);
+
+        rightScaleAnimation.setDuration(mAnimDuration);
+        rightScaleAnimation.setFillAfter(true);
+        rightTranslateAnimation.setDuration(mAnimDuration);
+        mRightAnimator = new AnimationSet(false);
+        mRightAnimator.addAnimation(rightScaleAnimation);
+        mRightAnimator.setFillAfter(true);
+        mRightAnimator.addAnimation(rightTranslateAnimation);
+        mRightView.startAnimation(mRightAnimator);
+
+        centerScaleAnimation.setDuration(mAnimDuration);
+        centerScaleAnimation.setFillAfter(true);
+        centerTranslateAnimation.setDuration(mAnimDuration);
+        mCenterAnimator = new AnimationSet(false);
         mCenterAnimator.addAnimation(centerScaleAnimation);
         mCenterAnimator.setFillAfter(true);
         mCenterAnimator.addAnimation(centerTranslateAnimation);
@@ -283,10 +350,20 @@ public class RotateRoundView extends RelativeLayout {
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         // TODO Auto-generated method stub
-//        mGestureDetector.onTouchEvent(event);
+        //        mGestureDetector.onTouchEvent(event);
         switch (event.getAction()) {
         case MotionEvent.ACTION_DOWN:
-            startAnimator();
+            int startIndex = event.getActionIndex();
+            mStartX = event.getX(startIndex);
+            break;
+        case MotionEvent.ACTION_UP:
+            int endIndex = event.getActionIndex();
+            float endX = event.getX(endIndex);
+            if (endX - mStartX > 0) {
+                startRightAnimator();
+            } else {
+                startLeftAnimator();
+            }
             break;
         }
         return true;
